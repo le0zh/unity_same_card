@@ -7,6 +7,7 @@ public class MainMenuWindow : UIWindowBase
     public override void OnInit()
     {
         Debug.Log("Init");
+        AddOnClickListener("StartGameButton", ClickStartGame);
     }
 
     //请在这里写UI的更新逻辑，当该UI监听的事件触发时，该函数会被调用
@@ -35,5 +36,11 @@ public class MainMenuWindow : UIWindowBase
         //});
 
         yield return new WaitForEndOfFrame();
+    }
+
+    public void ClickStartGame(InputUIOnClickEvent e)
+    {
+        Debug.Log("Start Game");
+        ApplicationStatusManager.EnterStatus<SingleGameState>();
     }
 }
