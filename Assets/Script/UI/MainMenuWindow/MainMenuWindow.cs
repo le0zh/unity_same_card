@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text;
 
 public class MainMenuWindow : UIWindowBase
 {
@@ -40,7 +41,14 @@ public class MainMenuWindow : UIWindowBase
 
     public void ClickStartGame(InputUIOnClickEvent e)
     {
-        Debug.Log("Start Game");
-        ApplicationStatusManager.EnterStatus<SingleGameState>();
+        //Debug.Log("Start Game");
+        var cards = CardService.GetQuestions(10);
+        StringBuilder sb = new StringBuilder();
+        cards.ForEach((i) =>
+        {
+            sb.Append(i + ",");
+        });
+        Debug.Log(sb.ToString());
+        // ApplicationStatusManager.EnterStatus<SingleGameState>();
     }
 }
