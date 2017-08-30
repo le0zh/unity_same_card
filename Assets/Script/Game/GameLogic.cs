@@ -5,4 +5,8 @@ using System.Text;
 
 public class GameLogic
 {
+    public static void Init()
+    {
+
+    }
 }

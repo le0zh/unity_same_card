@@ -200,14 +200,16 @@ public class ApplicationManager : MonoBehaviour
     /// </summary>
     void SetResourceLoadType()
     {
-        if (UseAssetsBundle)
-        {
-            ResourceManager.m_gameLoadType = ResLoadLocation.Streaming;
-        }
-        else
-        {
-            ResourceManager.m_gameLoadType = ResLoadLocation.Resource;
-        }
+        //if (UseAssetsBundle)
+        //{
+        //    ResourceManager.m_gameLoadType = ResLoadLocation.Streaming;
+        //}
+        //else
+        //{
+        //    ResourceManager.m_gameLoadType = ResLoadLocation.Resource;
+        //}
+
+        ResourceManager.m_gameLoadType = ResLoadLocation.Resource;
     }
 
     /// <summary>

@@ -76,16 +76,16 @@ public class LuaManager
     public static void LaunchLua()
     {
         //Debug.Log("LaunchLua");
-        //try
-        //{
-        //    s_state.GetFunction("Main").Call();
-        //    s_isUpdate = true;
-        //    s_updateFunction = s_state.GetFunction("LuaUpdate");
-        //}
-        //catch (Exception e)
-        //{
-        //    Debug.LogError("Lua Lunch Execption " + e.ToString());
-        //}
+        try
+        {
+            s_state.GetFunction("Main").Call();
+            s_isUpdate = true;
+            s_updateFunction = s_state.GetFunction("LuaUpdate");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Lua Lunch Execption " + e.ToString());
+        }
     }
 
     static LuaFunction s_updateFunction;

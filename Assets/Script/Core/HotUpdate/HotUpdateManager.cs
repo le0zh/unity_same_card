@@ -44,10 +44,10 @@ public class HotUpdateManager
         Init();
 
         //检查Streaming版本和Persistent版本哪一个更新
-        CheckLocalVersion();
+        // CheckLocalVersion();
         
         //开始热更新
-        ApplicationManager.Instance.StartCoroutine(HotUpdateProgress());
+        // ApplicationManager.Instance.StartCoroutine(HotUpdateProgress());
     }
 
     /// <summary>
